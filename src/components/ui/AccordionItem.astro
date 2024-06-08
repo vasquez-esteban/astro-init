@@ -42,7 +42,9 @@ const { title, description } = Astro.props;
 </div>
 <script>
   function accordionSetup() {
-    const accordionItems = document.querySelectorAll(".accordion__item");
+    const accordionItems = document.querySelectorAll(
+      ".accordion__item",
+    ) as NodeListOf<HTMLElement>;
 
     accordionItems.forEach((accordionItem) => {
       const accordionToggle = accordionItem.querySelector(".accordion__toggle");
